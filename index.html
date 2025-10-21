@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Glowstone • Price Finder</title>
+  <meta name="theme-color" content="#111827">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <header class="hdr">
+    <div class="brand">
+      <img src="icons/icon-192.png" alt="Glowstone" class="logo"/>
+      <h1>Glowstone • Price Finder</h1>
+    </div>
+  </header>
+
+  <section class="searchbar">
+    <div class="searchwrap">
+      <input id="query" type="search" placeholder="Search by keyword (e.g., Calacatta, Stratus)" autocomplete="off" spellcheck="false">
+      <button id="clearBtn" class="ghost">Clear</button>
+      <ul id="suggestions" class="suggestions" hidden></ul>
+    </div>
+  </section>
+
+  <main id="result"></main>
+
+  <footer class="ftr">
+    <small>Powered by Google Sheets • $ / m² • Images optional</small>
+  </footer>
+
+  <script src="app.js?v=1"></script>
+</body>
+</html>
