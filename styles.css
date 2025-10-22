@@ -1,0 +1,54 @@
+:root{--bg:#0f1115;--card:#171a21;--text:#f5f7fa;--muted:#a9b2c3;--accent:#17a34a;--border:#262b36}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial,sans-serif}
+.hdr{padding:12px;border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:10px}
+.logo{width:32px;height:32px;border-radius:8px}
+h1{font-size:18px;margin:0}
+.searchbar{padding:12px;border-bottom:1px solid var(--border)}
+.searchwrap{position:relative;display:flex;gap:8px;align-items:flex-start}
+.searchwrap input{flex:1;padding:12px;border-radius:10px;border:1px solid var(--border);background:#0d0f14;color:var(--text);font-size:16px;line-height:1.3}
+button{cursor:pointer;border-radius:10px;border:1px solid var(--border);padding:10px 12px;background:transparent;color:var(--text);font-size:16px;line-height:1.3}
+button.primary{background:var(--accent);border:none;color:#fff}
+.suggestions{position:absolute;top:44px;left:0;right:96px;background:#10131a;border:1px solid var(--border);border-radius:10px;list-style:none;margin:6px 0 0 0;padding:6px;max-height:220px;overflow:auto;z-index:20}
+.suggestions li{padding:8px;border-radius:8px;cursor:pointer;font-size:16px}
+.suggestions li:hover{background:#1a202c}
+main{padding:12px}
+.card{max-width:820px;margin:0 auto;background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.card .img-wrap{position:relative;min-height:220px;background:#0b0d11;display:flex;align-items:center;justify-content:center}
+.card img{width:100%;max-height:520px;object-fit:cover;display:block}
+.fallback{color:#cbd2e0;font-weight:700}
+.card .content{padding:12px}
+.title{font-weight:700;font-size:18px;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.pricebox{border:1px solid var(--border);border-radius:10px;padding:10px}
+.pricebox .label{font-size:12px;color:var(--muted);margin-bottom:6px}
+.pricebox .value{font-weight:800;font-size:18px}
+.ftr{padding:12px;color:var(--muted);border-top:1px solid var(--border);text-align:center}
+
+/* === Share actions row (for the card) === */
+.card .actions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:12px;
+  border-top:1px solid var(--border);
+}
+
+.card .actions button{
+  /* uses your existing button base styles; this adds a slightly denser hit area */
+  padding:8px 12px;
+}
+
+.share-toast{
+  font-size:14px;
+  color:var(--accent);
+  opacity:0;
+  transition:opacity 180ms ease;
+}
+
+/* helper class we’ll toggle from JS when copy succeeds */
+.share-toast.show{
+  opacity:1;
+}
